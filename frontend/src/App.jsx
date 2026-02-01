@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Feed from "./components/Feed";
 import Leaderboard from "./components/Leaderboard";
-import UserSwitcher from "./components/UserSwitcher";
+import UserSwitcher from "./components/Userswitcher";
 import { getLeaderboard } from "./api";
 
 export default function App() {
