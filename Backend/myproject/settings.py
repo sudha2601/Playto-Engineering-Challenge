@@ -2,15 +2,12 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# SECURITY (dev only)
+# SECURITY (dev / assignment only)
 SECRET_KEY = "dev-secret-key"
 
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
-
 
 # Applications
 
@@ -23,33 +20,29 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "rest_framework",
-    "corsheaders",     # ADD THIS
+    "corsheaders",
 
     "feed",
 ]
 
-
+# Middleware
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
-    "feed.middleware.MockAuthMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
 
-    # put mock AFTER auth
+    # mock AFTER auth
     "feed.middleware.MockAuthMiddleware",
 
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-
-
 ROOT_URLCONF = "myproject.urls"
-
 
 TEMPLATES = [
     {
@@ -66,11 +59,9 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = "myproject.wsgi.application"
 
-
-# Database (SQLite for development)
+# Database (SQLite)
 
 DATABASES = {
     "default": {
@@ -78,7 +69,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
 
 # Password validation
 
@@ -89,30 +79,40 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
-
 # Internationalization
 
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
-
 USE_TZ = True
-
 
 # Static files
 
 STATIC_URL = "/static/"
 
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# ======================
+# CORS (ALLOW EVERYTHING)
+# ======================
+
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = ["http://localhost:5173"]
+
 CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
     "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
     "x-mock-user-id",
 ]
+
+# DRF
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
