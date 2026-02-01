@@ -1,63 +1,56 @@
-Project Name
+# Project Name
 
 A full-stack web application featuring a nested comment system and a real-time activity leaderboard.
 
-🚀 Live Demo
+---
+
+## 🚀 Live Demo
 
 https://playto-engineering-challenge-kgdg.vercel.app/
 
-📄 Documentation
+---
 
-For details on the database modeling (The Tree), the leaderboard logic (The Math), and the AI generation audit, please see:
+## 📄 Documentation
 
-EXPLAINER.md
+For details on the database modeling (**The Tree**), the leaderboard logic (**The Math**), and the AI generation audit, please see:
 
-🛠 Local Development Setup
-Prerequisites
+- `EXPLAINER.md`
 
-Python
+---
 
-Node.js
+## 🛠 Local Development Setup
 
-Clone the Repository
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Python  
+- Node.js  
+
+---
+
+## 📥 Clone the Repository
+
+```bash
 git clone <your-repo-url>
 cd <your-project-folder>
 
-Backend Setup
+---
+
+## 🔧 Backend Setup
+
+```bash
 cd backend
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 
+---
 
-Backend runs at:
-
-http://127.0.0.1:8000/
-
-Frontend Setup
-
-Open a new terminal:
-
+## Frontend Setup
+```bash
 cd frontend
+npm install
 npm run dev
 
-
-Frontend runs at:
-
-http://localhost:3000/
-
-
-(or the port shown in terminal)
-
-Tech Stack
-Backend
-
-Django
-
-Frontend
-
-React
-
-Database
-
-SQLite / PostgreSQL
+---
