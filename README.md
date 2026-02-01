@@ -24,10 +24,10 @@ Follow these steps to run the application locally.
 git clone <your-repo-url>
 cd <your-project-folder>
 
-2. Backend Setup
+### 2. Backend setup
 Navigate to the backend directory to start the Django server.
 
-Bash
+```bash
 # Enter the backend directory
 cd backend
 
@@ -41,12 +41,12 @@ python manage.py migrate
 python manage.py runserver
 The backend API is now running at http://127.0.0.1:8000/
 
-3. Frontend Setup
+### 3. Frontend Setup
 Open a new terminal and navigate to the frontend directory.
 
 Note: node_modules are included in the repository, so no installation is required.
 
-Bash
+```bash
 # Enter the frontend directory
 cd frontend
 
@@ -54,7 +54,7 @@ cd frontend
 npm run dev
 The frontend is now running at http://localhost:3000/ (or the port shown in your terminal).
 
-💻 Tech Stack
+###💻 Tech Stack
 Backend: Python (Django)
 
 Frontend: Node.js / React
