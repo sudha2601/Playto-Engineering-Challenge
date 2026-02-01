@@ -1,4 +1,4 @@
-const BASE = "http://127.0.0.1:8000/api";
+const BASE = "https://striking-patience-production-c0ff.up.railway.app/api";
 
 function getAuthParams() {
   const user = localStorage.getItem("user");
