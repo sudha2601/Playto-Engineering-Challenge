@@ -1,77 +1,63 @@
-# Project Name
+Project Name
 
 A full-stack web application featuring a nested comment system and a real-time activity leaderboard.
 
----
+🚀 Live Demo
 
-## 🚀 Live Demo
+https://playto-engineering-challenge-kgdg.vercel.app/
 
-**[Link to deployed website](https://playto-engineering-challenge-kgdg.vercel.app/)**
-
----
-
-## 📄 Documentation
+📄 Documentation
 
 For details on the database modeling (The Tree), the leaderboard logic (The Math), and the AI generation audit, please see:
 
-[**EXPLAINER.md**](./EXPLAINER.md)
+EXPLAINER.md
 
----
+🛠 Local Development Setup
+Prerequisites
 
-## 🛠️ Local Development Setup
+Python
 
-Follow these steps to run the application locally.
+Node.js
 
----
-
-### Prerequisites
-
-- Python installed  
-- Node.js installed  
-
----
-
-## 1. Clone the Repository
-
-```bash
+Clone the Repository
 git clone <your-repo-url>
 cd <your-project-folder>
-2. Backend Setup
-Navigate to the backend directory:
 
+Backend Setup
 cd backend
-Install Python dependencies:
-
 pip install -r requirements.txt
-Run migrations to setup the database:
-
 python manage.py migrate
-Start the Django server:
-
 python manage.py runserver
-The backend API is now running at:
+
+
+Backend runs at:
 
 http://127.0.0.1:8000/
-3. Frontend Setup
-Open a new terminal and navigate to the frontend directory.
 
-Note: node_modules are included in the repository, so no installation is required.
+Frontend Setup
+
+Open a new terminal:
 
 cd frontend
-Start the development server:
-
 npm run dev
-The frontend is now running at:
+
+
+Frontend runs at:
 
 http://localhost:3000/
-(or the port shown in your terminal)
 
-💻 Tech Stack
+
+(or the port shown in terminal)
+
+Tech Stack
 Backend
-Python (Django)
+
+Django
 
 Frontend
-Node.js / React
+
+React
 
 Database
-SQLite / PostgreSQL (update as needed)
+
+SQLite / PostgreSQL
