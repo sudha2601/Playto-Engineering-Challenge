@@ -1,4 +1,4 @@
-# Project Name
+# Playto Challenge
 
 A full-stack web application featuring a nested comment system and a real-time activity leaderboard.
 
